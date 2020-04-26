@@ -4,7 +4,7 @@ Please make sure you have added the following environment variables in Terraform
 
 - Tenancy OCID `tenancy_ocid` 
 - User OCID `user_ocid`
-- Fingerprint `fingerprint`
+- Fingerprint `fingerprint` by using `cat ~/.oci/config`
 - Private Key `private_key` - Please be sure add only `private_key` no `path` and enter the contents of private keys by `cat ~/.oci/oci_api_key_public.pem`
 - Region short code `region`
 - Compartment OCID - `compartment_ocid` Note tenancy_ocid will be equals to root compartment_ocid
@@ -15,14 +15,17 @@ Please make sure you have added the following environment variables in Terraform
 
 
 #### Following 
-`variable "tenancy_ocid" {}
+
+```HCL
+variable "tenancy_ocid" {}
 variable "user_ocid" {}
 variable "fingerprint" {}
 variable "private_key" {}
 variable "region" {}
 variable "compartment_ocid" {}
 variable "ssh_public_key" {}
-variable "ssh_private_key" {}`
+variable "ssh_private_key" {}
+```
 
 
 
