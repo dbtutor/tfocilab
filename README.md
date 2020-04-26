@@ -11,6 +11,14 @@ Please make sure you have added the following environment variables in Terraform
 - ssh_public_key `ssh_public_key`
 - ssh_private_key `ssh_private_key`
 
+#### Sample - How to get them
+
+- private_key_path - `cat ~/.oci/oci_api_key.pem`
+- ssh_public_key  - `cat ~/.ssh/id_rsa.pub`
+- ssh_private_key - `cat ~/.ssh/id_rsa`
+- Public key value in PEM format `cat ~/.oci/oci_api_key_public.pem`
+- verify the fingerprint `cat ~/.oci/config`
+
 ![image](https://user-images.githubusercontent.com/626498/80310496-a5b58f80-87f8-11ea-849d-6891822202e5.png)
 
 
