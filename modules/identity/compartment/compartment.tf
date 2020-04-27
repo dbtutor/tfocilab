@@ -17,6 +17,11 @@ variable "compartment_descr" {
 	description = "Compartment Description goes here"
 	type = string
 }
+variable "freeform_tags" {
+  type        = map(string)
+  default     = {}
+  description = "Additional tags (e.g. `map('BusinessUnit','XYZ')`"
+}
 
 
 // Creating the Compartment
@@ -29,5 +34,7 @@ resource "oci_identity_compartment" "CreateCompartmentName" {
   name           = var.compartment_name
   description    = var.compartment_descr
   enable_delete  = true  // true will cause this compartment to be deleted when running `terrafrom destroy`
+ 
+  freeform_tags = var.freeform_tags
 }
 
